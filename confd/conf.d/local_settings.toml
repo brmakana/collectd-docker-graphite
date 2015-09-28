@@ -1,0 +1,6 @@
+[template]
+keys        = [ "/services/carbonrelay" ]
+owner       = "root"
+mode        = "0644"
+src         = "collectd.conf.tmpl"
+dest        = "/etc/collectd/collectd.conf"

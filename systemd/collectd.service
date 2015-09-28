@@ -7,9 +7,8 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill collectd
 ExecStartPre=-/usr/bin/docker rm collectd
 ExecStartPre=/usr/bin/docker pull makana.io/makanab/collectd
-ExecStart=/bin/sh -c "/usr/bin/docker run --rm --name collectd --privileged -v /proc:/mnt/proc:ro makana.io/makanab/collectd"
+ExecStart=/bin/sh -c "/usr/bin/docker run --rm --name collectd -e HOST_IP=$COREOS_PRIVATE_IPV4 --privileged -v /proc:/mnt/proc:ro makana.io/makanab/collectd"
 ExecStop=/usr/bin/docker stop collectd
 
 [X-Fleet]
-X-Conflicts=collectd.service
 Global=true

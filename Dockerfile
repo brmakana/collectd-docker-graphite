@@ -75,6 +75,7 @@ RUN mkdir -p /etc/confd/conf.d
 RUN mkdir -p /etc/confd/templates
 ADD ./confd /etc/confd
 ADD collectd.conf /etc/collectd/collectd.conf
+RUN	mkdir -p /etc/collectd/collectd.conf.d
 
 # run
 ENTRYPOINT ["/boot.sh"]

@@ -28,10 +28,9 @@ if [ -d /mnt/proc ]; then
 fi
 
 if [ -z "$@" ]; then
+  echo "[collectd] starting"
   exec /usr/sbin/collectd -C /etc/collectd/collectd.conf -f
 else
   exec $@
 fi
 
-# Start
-echo "[collectd] starting"

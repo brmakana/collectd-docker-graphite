@@ -31,13 +31,7 @@ RUN apt-get update && apt-get install -y \
       libpcap-dev \
       libperl-dev \
       libpq-dev \
-      libprotobuf-c-dev \
-      librabbitmq-dev \
       librrd-dev \
-      libsensors4-dev \
-      libsnmp-dev \
-      libtokyocabinet-dev \
-      libtokyotyrant-dev \
       libtool \
       libupsclient-dev \
       libvirt-dev \
